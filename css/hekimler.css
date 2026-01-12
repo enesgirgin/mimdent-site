@@ -1,0 +1,22 @@
+/* =========================
+   DOCTORS
+========================= */
+.doctors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.doctor {
+  width: 250px;
+}
+
+.doctor img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}

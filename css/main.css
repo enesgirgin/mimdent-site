@@ -1,0 +1,128 @@
+/* =========================
+   GLOBAL RESET & TYPOGRAPHY
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+.topbar {
+  background-color: #faf8f4;
+  color: #444;
+  font-size: 14px;
+  padding: 6px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #eceae6;
+}
+
+.topbar a {
+  color: #444;
+  text-decoration: none;
+  margin-left: 10px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.topbar a img {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+/* =========================
+   HEADER & NAV
+========================= */
+header {
+  background-color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #0077b6;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.logo-section img {
+  height: 55px;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+/* =========================
+   DROPDOWN (GENEL)
+========================= */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  min-width: 230px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #555;
+  background-color: #f1faff;
+  margin-top: 40px;
+}
+
+/* =========================
+   FLOATING WHATSAPP
+========================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  background-color: #25d366;
+  border-radius: 50%;
+}

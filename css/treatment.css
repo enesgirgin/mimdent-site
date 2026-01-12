@@ -1,0 +1,37 @@
+/* =========================
+   TREATMENT PAGE
+========================= */
+.treatment-container {
+  max-width: 1200px;
+  margin: 60px auto;
+  display: flex;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.treatment-text {
+  flex: 2;
+  line-height: 1.8;
+}
+
+.treatment-text h1 {
+  color: #0077b6;
+  margin-bottom: 20px;
+}
+
+.treatment-image {
+  flex: 1;
+}
+
+.treatment-image img {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 12px;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+  .treatment-container {
+    flex-direction: column;
+  }
+}
