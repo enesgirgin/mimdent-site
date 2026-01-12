@@ -2,22 +2,34 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="İmplant, gülüş tasarımı, ortodonti ve tüm diş tedavileri.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
   <title>Mimdent | Hekimlerimiz</title>
+
+  <link rel="alternate" hreflang="en" href="index-en.html">
+
   <style>
-    body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #ffffff; color: #333; }
- /* 🔹 Üst bilgilendirme barı (krem tonlu) */
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* Üst bilgilendirme barı */
     .topbar {
-		background-color: #faf8f4; /* soğuk krem ton */
-		color: #444;
-		font-size: 14px;
-		padding: 6px 30px;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		border-bottom: 1px solid #eceae6;
-	}	
+      background-color: #faf8f4;
+      color: #444;
+      font-size: 14px;
+      padding: 6px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #eceae6;
+    }
+
     .topbar a {
       color: #444;
       text-decoration: none;
@@ -26,14 +38,16 @@
       align-items: center;
       transition: 0.3s;
     }
+
     .topbar a:hover { opacity: 0.7; }
+
     .topbar a img {
       width: 18px;
       height: 18px;
       margin-right: 5px;
     }
 
-    /* 🔹 Logo + Menü */
+    /* Logo + Menü */
     header {
       background-color: white;
       padding: 10px 30px;
@@ -43,23 +57,28 @@
       flex-wrap: wrap;
       border-bottom: 1px solid #e0e0e0;
     }
+
     .logo-section {
       display: flex;
       align-items: center;
       text-decoration: none;
       color: #0077b6;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 22px;
     }
+
     .logo-section img {
-      height: 55px;
+      height: 50px;
       margin-right: 10px;
     }
+
     nav {
       display: flex;
       gap: 25px;
       flex-wrap: wrap;
+      align-items: center;
     }
+
     nav a {
       color: #0077b6;
       text-decoration: none;
@@ -67,6 +86,7 @@
       position: relative;
       transition: 0.3s;
     }
+
     nav a::after {
       content: "";
       position: absolute;
@@ -77,140 +97,170 @@
       bottom: -4px;
       transition: 0.3s;
     }
+
     nav a:hover::after { width: 100%; }
-	
-	/* 🔹 FLAG  */
-	.lang-switch img {
-	width: 26px;
-	height: auto;
-	vertical-align: middle;
-	margin-left: 10px;
-	cursor: pointer;
-	transition: transform 0.2s ease;
-	}
-	
-	/* 🔹 Dropdown Menü */
-	.dropdown {
-	position: relative;
-	}
-	
-	.dropdown-menu {
-	display: none;
-	position: absolute;
-	top: 100%;
-	left: 0;
-	background: #ffffff;
-	min-width: 230px;
-	box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-	border-radius: 6px;
-	padding: 10px 0;
-	z-index: 999;
-	}
-	
-	.dropdown-menu a {
-	display: block;
-	padding: 10px 20px;
-	color: #0077b6;
-	text-decoration: none;
-	font-size: 14px;
-	}
-	
-	.dropdown-menu a:hover {
-	background-color: #f1faff;
-	}
-	
-	.dropdown:hover .dropdown-menu {
-	display: block;
-	}
-	
 
-	.lang-switch img:hover {
-	transform: scale(1.1);
-	}    
-.logo-section { display: flex; align-items: center; text-decoration: none; color: #0077b6; font-weight: bold; font-size: 22px; }
-    .logo-section img { height: 50px; margin-right: 10px; }
-    .doctors-page { padding: 40px 20px; max-width: 1000px; margin: auto; }
-    .doctor-profile { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 50px; align-items: flex-start; }
-    .doctor-profile img { width: 250px; border-radius: 10px; background: #eee; }
-    .bio { flex: 1; }
-    .bio h2 { color: #0077b6; }
-    .bio p { line-height: 1.6; }
-    a { color: #0077b6; text-decoration: none; }
+    /* Dropdown Menü */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: #ffffff;
+      min-width: 230px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      border-radius: 6px;
+      padding: 10px 0;
+      z-index: 999;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 20px;
+      color: #0077b6;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #f1faff;
+    }
+
+    .dropdown:hover .dropdown-menu {
+      display: block;
+    }
+
+    /* Dil bayrağı */
+    .lang-switch img {
+      width: 26px;
+      height: auto;
+      vertical-align: middle;
+      margin-left: 10px;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .lang-switch img:hover {
+      transform: scale(1.1);
+    }
+
+    /* Doktorlar */
+    .doctors-page {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .doctor-profile {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 50px;
+      align-items: flex-start;
+    }
+
+    .doctor-profile img {
+      width: 250px;
+      border-radius: 10px;
+      background: #eee;
+    }
+
+    .bio {
+      flex: 1;
+    }
+
+    .bio h2 {
+      color: #0077b6;
+    }
+
+    .bio p {
+      line-height: 1.6;
+    }
   </style>
 </head>
+
 <body>
 
-  </style>
-  <link rel="alternate" hreflang="en" href="index-en.html">
-</head>
-<body>
-
-<!-- 🔹 ÜST BİLGİ BAR -->
+<!-- ÜST BİLGİ BAR -->
 <div class="topbar">
   <div>📞 Bilgi ve Randevu: <strong>+90 546 767 55 22</strong></div>
   <div>
-    <a href="https://wa.me/905467675522" target="_blank"><img src="whatsapp.png" alt="WhatsApp">WhatsApp</a>
-    <a href="https://instagram.com/mimdent34" target="_blank"><img src="instagram.png" alt="Instagram">Instagram</a>
-    <a href="https://facebook.com/mimdent34" target="_blank"><img src="facebook.png" alt="Facebook">Facebook</a>
-	<a href="mailto:mimdent34@gmail.com"><img src="email.png" alt="E-posta">mimdent34@gmail.com</a>
-
+    <a href="https://wa.me/905467675522" target="_blank">
+      <img src="images/whatsapp.png" alt="WhatsApp">WhatsApp
+    </a>
+    <a href="https://instagram.com/mimdent34" target="_blank">
+      <img src="images/instagram.png" alt="Instagram">Instagram
+    </a>
+    <a href="https://facebook.com/mimdent34" target="_blank">
+      <img src="images/facebook.png" alt="Facebook">Facebook
+    </a>
+    <a href="mailto:mimdent34@gmail.com">
+      <img src="images/email.png" alt="E-posta">mimdent34@gmail.com
+    </a>
   </div>
 </div>
 
-<!-- 🔹 ANA MENÜ -->
+<!-- ANA MENÜ -->
 <header>
   <a href="index.html" class="logo-section">
-    <img src="mimdent_logo.jpeg" alt="Mimdent Logo">MİMDENT
+    <img src="images/mimdent_logo.jpeg" alt="Mimdent Logo">MİMDENT
   </a>
-<nav>
-  <a href="index.html">Anasayfa</a>
 
-  <div class="dropdown">
-    <a href="#tedaviler">Tedavilerimiz ▾</a>
-    <div class="dropdown-menu">
-      <a href="implant.html">İmplant Tedavisi</a>
-      <a href="gulus-tasarimi.html">Gülüş Tasarımı</a>
-      <a href="endodonti.html">Endodonti</a>
-      <a href="dis-beyazlatma.html">Diş Beyazlatma</a>
-      <a href="ortodonti.html">Ortodonti</a>
-      <a href="pedodonti.html">Pedodonti</a>
-      <a href="periodontoloji.html">Periodontoloji</a>
-      <a href="protetik.html">Protetik Diş Tedavisi</a>
+  <nav>
+    <a href="index.html">Anasayfa</a>
+
+    <div class="dropdown">
+      <a href="#tedaviler">Tedavilerimiz ▾</a>
+      <div class="dropdown-menu">
+        <a href="implant.html">İmplant Tedavisi</a>
+        <a href="gulus-tasarimi.html">Gülüş Tasarımı</a>
+        <a href="endodonti.html">Endodonti</a>
+        <a href="dis-beyazlatma.html">Diş Beyazlatma</a>
+        <a href="ortodonti.html">Ortodonti</a>
+        <a href="pedodonti.html">Pedodonti</a>
+        <a href="periodontoloji.html">Periodontoloji</a>
+        <a href="protetik.html">Protetik Diş Tedavisi</a>
+      </div>
     </div>
-  </div>
 
-  <a href="hekimler.html">Hekimlerimiz</a>
-  <a href="blog.html">Blog</a>
-  <a href="index.html#iletisim">Randevu</a>
-  <a href="sss.html">SSS</a>
+    <a href="hekimler.html">Hekimlerimiz</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#iletisim">Randevu</a>
+    <a href="sss.html">SSS</a>
 
-
-  <a href="index-en.html" class="lang-switch">
-    <img src="flag-uk.png" alt="English">
-  </a>
-</nav>
-
+    <a href="index-en.html" class="lang-switch">
+      <img src="images/flag-uk.png" alt="English">
+    </a>
   </nav>
 </header>
 
 <section class="doctors-page">
+
   <div class="doctor-profile">
-    <img src="melissa.jpg" alt="Elif Melissa Girgin">
+    <img src="images/melissa.jpg" alt="Elif Melissa Girgin">
     <div class="bio">
       <h2>Dt. Elif Melissa Girgin</h2>
       <p><strong>Genel Diş Hekimi</strong></p>
-      <p> İstanbul'da </p>
+      <p>İstanbul'da hizmet vermektedir.</p>
     </div>
   </div>
 
   <div class="doctor-profile">
-    <img src="murat.png" alt="Murat Akyüzlü">
+    <img src="images/murat.png" alt="Murat Akyüzlü">
     <div class="bio">
       <h2>Dt. Murat Akyüzlü</h2>
       <p><strong>Genel Diş Hekimi</strong></p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lectus nulla. In facilisis, tortor id blandit aliquam, leo risus tristique orci, eget porttitor mi odio eget lectus. Praesent vehicula ultrices neque in pulvinar.</p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec lectus nulla.
+        In facilisis, tortor id blandit aliquam, leo risus tristique orci, eget porttitor mi odio eget lectus.
+      </p>
     </div>
   </div>
+
 </section>
 
 </body>
