@@ -138,25 +138,6 @@
   <img src="images/whatsapp.png" alt="WhatsApp">
 </a>
 
-<!-- HERO SLIDER SCRIPT -->
-<script>
-  const heroImages = [
-    "images/katalog1.jpg",
-    "images/katalog2.jpg",
-    "images/katalog3.jpg"
-  ];
-
-  let currentImage = 0;
-  const hero = document.querySelector(".hero");
-
-  hero.style.backgroundImage = `url('${heroImages[0]}')`;
-
-  setInterval(() => {
-    currentImage = (currentImage + 1) % heroImages.length;
-    hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
-  }, 3000);
-</script>
-
 <script src="js/main.js"></script>
 </body>
 </html>
