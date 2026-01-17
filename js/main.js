@@ -1,24 +1,53 @@
 /* =========================
-   MOBİL DROPDOWN MENU
+   HAMBURGER MENÜ
 ========================= */
 document.addEventListener("DOMContentLoaded", function () {
-  const dropdownToggle = document.querySelector(".dropdown-toggle");
+  const menuToggle = document.querySelector(".menu-toggle");
+  const nav = document.querySelector("nav");
   const dropdown = document.querySelector(".dropdown");
+  const dropdownLink = dropdown ? dropdown.querySelector("a") : null;
 
-  if (dropdownToggle && dropdown) {
-    dropdownToggle.addEventListener("click", function (e) {
+  // Hamburger menü toggle
+  if (menuToggle && nav) {
+    menuToggle.addEventListener("click", function () {
+      menuToggle.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+  }
+
+  // Dropdown toggle (mobil)
+  if (dropdownLink && dropdown) {
+    dropdownLink.addEventListener("click", function (e) {
       if (window.innerWidth <= 768) {
         e.preventDefault();
         dropdown.classList.toggle("open");
       }
     });
+  }
 
-    document.addEventListener("click", function (e) {
-      if (window.innerWidth <= 768 && !dropdown.contains(e.target)) {
+  // Dışarı tıklandığında menüyü kapat
+  document.addEventListener("click", function (e) {
+    if (window.innerWidth <= 768) {
+      // Hamburger menü dışına tıklandığında kapat
+      if (menuToggle && nav && !nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuToggle.classList.remove("active");
+        nav.classList.remove("active");
+      }
+      // Dropdown dışına tıklandığında kapat
+      if (dropdown && !dropdown.contains(e.target)) {
         dropdown.classList.remove("open");
       }
-    });
-  }
+    }
+  });
+
+  // Pencere boyutu değiştiğinde menüyü sıfırla
+  window.addEventListener("resize", function () {
+    if (window.innerWidth > 768) {
+      if (menuToggle) menuToggle.classList.remove("active");
+      if (nav) nav.classList.remove("active");
+      if (dropdown) dropdown.classList.remove("open");
+    }
+  });
 });
 
 /* =========================
