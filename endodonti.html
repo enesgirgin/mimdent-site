@@ -2,227 +2,27 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="İmplant, gülüş tasarımı, ortodonti ve tüm diş tedavileri.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Endodonti (Kanal Tedavisi) | Mimdent Diş Kliniği</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Kanal tedavisi ile dişinizi kurtarın. Ağrısız endodonti tedavisi, diş kökü enfeksiyonları ve kanal dolgulama. İstanbul Kartal Mimdent.">
+  <meta name="keywords" content="kanal tedavisi, endodonti, diş kökü tedavisi, ağrısız kanal tedavisi, Kartal diş hekimi, Mimdent">
+  <meta name="author" content="Mimdent Diş Kliniği">
+  <meta name="robots" content="index, follow">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mimdent.com/endodonti.html">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://mimdent.com/endodonti.html">
+  <meta property="og:title" content="Endodonti (Kanal Tedavisi) | Mimdent Diş Kliniği">
+  <meta property="og:description" content="Kanal tedavisi ile dişinizi kurtarın. Ağrısız endodonti tedavisi.">
+  <meta property="og:image" content="https://mimdent.com/images/endodonti_resim.jpg">
+  
   <link rel="icon" href="favicon.ico">
-  <title>Endodonti | Mimdent</title>
-
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      background-color: #ffffff;
-      color: #333;
-    }
-
-    /* Üst bilgilendirme barı */
-    .topbar {
-      background-color: #faf8f4;
-      color: #444;
-      font-size: 14px;
-      padding: 6px 30px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #eceae6;
-    }
-
-    .topbar a {
-      color: #444;
-      text-decoration: none;
-      margin-left: 10px;
-      display: inline-flex;
-      align-items: center;
-      transition: 0.3s;
-    }
-
-    .topbar a:hover { opacity: 0.7; }
-
-    .topbar a img {
-      width: 18px;
-      height: 18px;
-      margin-right: 5px;
-    }
-
-    /* Header */
-    header {
-      background-color: white;
-      padding: 10px 30px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      border-bottom: 1px solid #e0e0e0;
-    }
-
-    .logo-section {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: #0077b6;
-      font-weight: bold;
-      font-size: 22px;
-    }
-
-    .logo-section img {
-      height: 50px;
-      margin-right: 10px;
-    }
-
-    nav {
-      display: flex;
-      gap: 25px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-
-    nav a {
-      color: #0077b6;
-      text-decoration: none;
-      font-weight: 500;
-      position: relative;
-    }
-
-    nav a::after {
-      content: "";
-      position: absolute;
-      width: 0;
-      height: 2px;
-      background: #0077b6;
-      left: 0;
-      bottom: -4px;
-      transition: 0.3s;
-    }
-
-    nav a:hover::after { width: 100%; }
-
-    /* Dropdown */
-    .dropdown { position: relative; }
-
-    .dropdown-menu {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: #ffffff;
-      min-width: 230px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-      border-radius: 6px;
-      padding: 10px 0;
-      z-index: 999;
-    }
-
-    .dropdown-menu a {
-      display: block;
-      padding: 10px 20px;
-      color: #0077b6;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    .dropdown-menu a:hover {
-      background-color: #f1faff;
-    }
-
-    @media (min-width: 769px) {
-      .dropdown:hover .dropdown-menu { display: block; }
-    }
-
-    /* Dil */
-    .lang-switch img {
-      width: 26px;
-      margin-left: 10px;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .lang-switch img:hover {
-      transform: scale(1.1);
-    }
-
-    /* Tedavi alanı */
-    .treatment-section {
-      padding: 60px 20px;
-    }
-
-    .treatment-container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      gap: 50px;
-      align-items: flex-start;
-    }
-
-    .treatment-text {
-      flex: 2;
-      line-height: 1.7;
-    }
-
-    .treatment-text h1 {
-      color: #0077b6;
-      margin-bottom: 20px;
-    }
-
-    .treatment-image {
-      flex: 1;
-    }
-
-    .treatment-image img {
-      width: 100%;
-      max-width: 350px;
-      border-radius: 12px;
-      margin-top: 36px;
-    }
-
-    @media (max-width: 768px) {
-      .treatment-container {
-        flex-direction: column;
-      }
-    }
-
-    /* Accordion */
-    .faq-section {
-      max-width: 700px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .accordion-item {
-      border-bottom: 1px solid #ddd;
-    }
-
-    .accordion-header {
-      width: 100%;
-      background: none;
-      border: none;
-      padding: 18px 0;
-      font-size: 16px;
-      font-weight: 600;
-      color: #0077b6;
-      display: flex;
-      justify-content: space-between;
-      cursor: pointer;
-    }
-
-    .accordion-content {
-      display: none;
-      padding-bottom: 15px;
-    }
-
-    .accordion-item.active .accordion-content {
-      display: block;
-    }
-
-    .accordion-header span {
-      font-size: 22px;
-      transition: transform 0.3s;
-    }
-
-    .accordion-item.active span {
-      transform: rotate(45deg);
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -231,23 +31,29 @@
 <div class="topbar">
   <div>📞 Bilgi ve Randevu: <strong>+90 546 767 55 22</strong></div>
   <div>
-    <a href="https://wa.me/905467675522" target="_blank"><img src="images/whatsapp.png">WhatsApp</a>
-    <a href="https://instagram.com/mimdent34" target="_blank"><img src="images/instagram.png">Instagram</a>
-    <a href="https://facebook.com/mimdent34" target="_blank"><img src="images/facebook.png">Facebook</a>
-    <a href="mailto:mimdent34@gmail.com"><img src="images/email.png">mimdent34@gmail.com</a>
+    <a href="https://wa.me/905467675522" target="_blank"><img src="images/whatsapp.png" alt="WhatsApp">WhatsApp</a>
+    <a href="https://instagram.com/mimdent34" target="_blank"><img src="images/instagram.png" alt="Instagram">Instagram</a>
+    <a href="https://facebook.com/mimdent34" target="_blank"><img src="images/facebook.png" alt="Facebook">Facebook</a>
+    <a href="mailto:mimdent34@gmail.com"><img src="images/email.png" alt="E-posta">mimdent34@gmail.com</a>
   </div>
 </div>
 
+<!-- ANA MENÜ -->
 <header>
   <a href="index.html" class="logo-section">
-    <img src="images/mimdent_logo.jpeg">MİMDENT
+    <img src="images/mimdent_logo.jpeg" alt="Mimdent Logo">MİMDENT
   </a>
+
+  <button class="menu-toggle" aria-label="Menüyü aç/kapat">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
 
   <nav>
     <a href="index.html">Anasayfa</a>
-
     <div class="dropdown">
-      <a href="#">Tedavilerimiz ▾</a>
+      <a href="index.html#tedaviler">Tedavilerimiz ▾</a>
       <div class="dropdown-menu">
         <a href="implant.html">İmplant Tedavisi</a>
         <a href="gulus-tasarimi.html">Gülüş Tasarımı</a>
@@ -259,12 +65,10 @@
         <a href="protetik.html">Protetik Diş Tedavisi</a>
       </div>
     </div>
-
     <a href="hekimler.html">Hekimlerimiz</a>
     <a href="blog.html">Blog</a>
     <a href="index.html#iletisim">Randevu</a>
     <a href="sss.html">SSS</a>
-
     <a href="index-en.html" class="lang-switch">
       <img src="images/flag-uk.png" alt="English">
     </a>
@@ -275,58 +79,45 @@
   <div class="treatment-container">
     <div class="treatment-text">
       <h1>Endodonti (Kanal Tedavisi)</h1>
-      <p>
-        Endodonti, dişin iç kısmında bulunan pulpa dokusunun hastalıklarını tedavi eden diş hekimliği dalıdır.
-        En sık uygulanan işlem kanal tedavisidir ve dişi çekmeden ağızda tutmayı amaçlar.
-      </p>
-      <p>
-        Derin çürükler, travmalar veya enfeksiyonlar sonucunda diş siniri zarar görebilir.
-        Kanal tedavisi ile enfekte dokular temizlenir ve kök kanalları doldurulur.
-      </p>
-      <p>
-        Doğru yapılan kanal tedavisi, dişin uzun yıllar sağlıklı kullanılmasını sağlar.
-      </p>
+      <p>Endodonti, dişin iç kısmında bulunan pulpa dokusunun hastalıklarını tedavi eden diş hekimliği dalıdır. En sık uygulanan işlem kanal tedavisidir ve dişi çekmeden ağızda tutmayı amaçlar.</p>
+      <p>Derin çürükler, travmalar veya enfeksiyonlar sonucunda diş siniri zarar görebilir. Kanal tedavisi ile enfekte dokular temizlenir ve kök kanalları doldurulur.</p>
+      <p>Doğru yapılan kanal tedavisi, dişin uzun yıllar sağlıklı kullanılmasını sağlar.</p>
     </div>
-
     <div class="treatment-image">
       <img src="images/endodonti_resim.jpg" alt="Endodonti Tedavisi">
     </div>
   </div>
-</section>
 
-<section class="faq-section">
-  <h2>Sık Sorulan Sorular</h2>
-
-  <div class="accordion">
-    <div class="accordion-item">
-      <button class="accordion-header">
-        Kanal tedavisi yapılan diş tekrar ağrır mı?
-        <span>+</span>
-      </button>
-      <div class="accordion-content">
-        <p>Doğru yapılan kanal tedavisi sonrası ağrı beklenmez.</p>
+  <section class="faq-section">
+    <h2>Sık Sorulan Sorular</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">Kanal tedavisi yapılan diş tekrar ağrır mı?<span>+</span></button>
+        <div class="accordion-content">
+          <p>Doğru yapılan kanal tedavisi sonrası ağrı beklenmez.</p>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">Kanal tedavisi kaç seans sürer?<span>+</span></button>
+        <div class="accordion-content">
+          <p>Genellikle 1-2 seansta tamamlanır.</p>
+        </div>
       </div>
     </div>
-
-    <div class="accordion-item">
-      <button class="accordion-header">
-        Kanal tedavisi kaç seans sürer?
-        <span>+</span>
-      </button>
-      <div class="accordion-content">
-        <p>Genellikle 2 seansta tamamlanır.</p>
-      </div>
-    </div>
-  </div>
+  </section>
 </section>
 
-<script>
-  document.querySelectorAll('.accordion-header').forEach(btn => {
-    btn.addEventListener('click', () => {
-      btn.parentElement.classList.toggle('active');
-    });
-  });
-</script>
+<!-- FOOTER -->
+<footer>
+  <p>📍 Soğanlık Yeni, Mimar Sinan Cd. No:30A, 34862 Kartal/İstanbul</p>
+  <p>© 2025 Mimdent Diş Kliniği</p>
+</footer>
 
+<!-- Floating WhatsApp Button -->
+<a href="https://wa.me/905467675522" class="whatsapp-float" target="_blank" aria-label="WhatsApp ile iletişime geç">
+  <img src="images/whatsapp.png" alt="WhatsApp">
+</a>
+
+<script src="js/main.js"></script>
 </body>
 </html>
