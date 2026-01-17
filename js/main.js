@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ========================= */
 document.addEventListener("DOMContentLoaded", function () {
   const hero = document.querySelector(".hero");
-  if (!hero) return; // 👈 hero olmayan sayfalarda patlamasın
+  if (!hero) return;
 
   const heroImages = [
     "images/katalog1.jpg",
@@ -65,13 +65,60 @@ document.addEventListener("DOMContentLoaded", function () {
     "images/katalog5.jpg"
   ];
 
-  let currentImage = 0;
-  hero.style.backgroundImage = `url('${heroImages[0]}')`;
+  // Resimleri önceden yükle (preload)
+  heroImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
 
-  setInterval(() => {
-    currentImage = (currentImage + 1) % heroImages.length;
-    hero.style.backgroundImage = `url('${heroImages[currentImage]}')`;
-  }, 5000);
+  let currentIndex = 0;
+
+  // İki slide elementi oluştur
+  const slide1 = document.createElement("div");
+  const slide2 = document.createElement("div");
+  slide1.className = "hero-slide";
+  slide2.className = "hero-slide";
+  
+  // İlk resmi yükle
+  slide1.style.backgroundImage = `url('${heroImages[0]}')`;
+  slide1.style.transform = "translateX(0)";
+  slide2.style.transform = "translateX(100%)";
+  
+  // Hero'ya ekle (overlay'dan önce)
+  const overlay = hero.querySelector(".hero-overlay");
+  hero.insertBefore(slide1, overlay);
+  hero.insertBefore(slide2, overlay);
+
+  let activeSlide = slide1;
+  let nextSlide = slide2;
+
+  // Sağdan sola kayma fonksiyonu
+  function slideImage() {
+    currentIndex = (currentIndex + 1) % heroImages.length;
+    
+    // Yeni resmi hazırla
+    nextSlide.style.backgroundImage = `url('${heroImages[currentIndex]}')`;
+    nextSlide.style.transition = "none";
+    nextSlide.style.transform = "translateX(100%)";
+    
+    // Küçük gecikme sonra animasyonu başlat
+    setTimeout(() => {
+      nextSlide.style.transition = "transform 0.8s ease-in-out";
+      activeSlide.style.transition = "transform 0.8s ease-in-out";
+      
+      // Aktif slide sola kayar, yeni slide merkeze gelir
+      activeSlide.style.transform = "translateX(-100%)";
+      nextSlide.style.transform = "translateX(0)";
+      
+      // Slide'ları değiştir
+      const temp = activeSlide;
+      activeSlide = nextSlide;
+      nextSlide = temp;
+    }, 50);
+  }
+
+  // 5 saniyede bir değiştir
+  setInterval(slideImage, 5000);
 });
 
 /* =========================
