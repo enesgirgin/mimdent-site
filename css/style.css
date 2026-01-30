@@ -157,7 +157,7 @@
     /* 🔹 Hekimler */
     .doctors { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; text-align: center; }
     .doctor { width: 250px; }
-    .doctor img { width: 100%; border-radius: 10px; margin-bottom: 10px; background: #eee; height: 250px; object-fit: cover; }
+    .doctor img { width: 100%; border-radius: 10px; margin-bottom: 10px; background: #eee; height: 250px; object-fit: cover; object-position: center 20%; }
 
     /* 🔹 Form alanı */
     .form-section { background: #f5fbff; padding: 40px 20px; text-align: center; }
@@ -574,7 +574,7 @@
 	width: 100%;
 	background: none;
 	border: none;
-	padding: 18px 0;
+	padding: 18px 15px;
 	font-size: 16px;
 	font-weight: 600;
 	color: #0077b6;
@@ -583,6 +583,21 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-radius: 8px;
+	transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+	background-color: #e6f4fa;
+}
+
+.accordion-item.active .accordion-header {
+	background-color: #d0ebf7;
+	color: #005f8a;
+}
+
+.accordion-item.active .accordion-header:hover {
+	background-color: #c0e3f2;
 }
 
 .accordion-content {
